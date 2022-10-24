@@ -3,16 +3,16 @@ package main
 import (
 	"log"
 
+	"github.com/f5f5f5f5f5/userBalance_service/balance"
 	"github.com/f5f5f5f5f5/userBalance_service/package/handler"
-	"github.com/f5f5f5f5f5/userBalance_service/server"
 
 	"github.com/spf13/viper"
 )
 
 func main() {
-	handlers := handler.Handler{}
-	srv := new(server.Server)
-	if err := srv.Run(); err != nil {
+	handlers := new(handler.Handler)
+	srv := new(balance.Server)
+	if err := srv.Run("8080", handlers.initRoutes()); err != nil {
 		log.Fatalf("error occured while running http server: %s", err.Error())
 	}
 	if err := initConfig(); err != nil {
