@@ -2,9 +2,9 @@ package main
 
 import (
 	"log"
+	balance "userBalance"
 
-	balance "github.com/f5f5f5f5f5/userBalance_service"
-	"github.com/f5f5f5f5f5/userBalance_service/package/handler"
+	"github.com/f5f5f5f5f5/userBalance/package/handler"
 
 	"github.com/spf13/viper"
 )
