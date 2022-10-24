@@ -4,7 +4,7 @@ import (
 	"log"
 
 	balance "github.com/f5f5f5f5f5/userBalance_service"
-	handler "github.com/f5f5f5f5f5/userBalance_service/package"
+	"github.com/f5f5f5f5f5/userBalance_service/package/handler"
 
 	"github.com/spf13/viper"
 )
